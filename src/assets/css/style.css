@@ -1,0 +1,10 @@
+@import url("../css/fonts.css");
+
+body {
+  font-family: "IRANYekanX";
+}
+.fa-num {
+  -moz-font-feature-settings: "ss02";
+  -webkit-font-feature-settings: "ss02";
+  font-feature-settings: "ss02";
+}
