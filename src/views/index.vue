@@ -36,7 +36,7 @@ import SocialButtons from "@/components/SocialButton.vue";
         <MainButton icon="solar:point-on-map-perspective-linear" title="ایمیل" subtitle="eypidev@gmail.com" link="mailto:eypidev@gmail.com" />
         <MainButton icon="solar:earth-linear" title="وبسایت" subtitle="eypi.ir" link="https://eypi.ir" />
       </div>
-      <div class="flex flex-wrap gap-[16px]">
+      <div class="grid grid-cols-5 gap-[16px]">
         <SocialButtons icon="bxl:instagram" link="/" color="#6C8091" />
         <SocialButtons icon="bxl:telegram" link="/" color="#24A1DE" />
         <SocialButtons icon="bxl:youtube" link="/" color="#FF0000" />
