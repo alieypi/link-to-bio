@@ -6,7 +6,7 @@ import SocialButton from "@/components/SocialButton.vue";
 
 <template>
   <main class="m-auto max-w-[430px] pt-[170px]">
-    <div class="flex flex-col gap-[18px] w-full h-screen bg-white rounded-t-[40px] px-[32px]">
+    <div class="flex flex-col gap-[18px] w-full bg-white rounded-t-[40px] px-[32px]">
       <div class="flex flex-row">
         <div class="basis-1/6">
           <div class="flex justify-center py-[30px]">
