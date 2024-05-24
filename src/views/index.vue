@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import MainButton from "@/components/MainButton.vue";
+import SocialButtons from "@/components/SocialButton.vue";
 </script>
 
 <template>
@@ -34,6 +35,18 @@ import MainButton from "@/components/MainButton.vue";
         <MainButton icon="solar:phone-calling-linear" title="موبایل" subtitle="09395914874" link="call:+989395914874" />
         <MainButton icon="solar:point-on-map-perspective-linear" title="ایمیل" subtitle="eypidev@gmail.com" link="mailto:eypidev@gmail.com" />
         <MainButton icon="solar:earth-linear" title="وبسایت" subtitle="eypi.ir" link="https://eypi.ir" />
+      </div>
+      <div class="flex flex-wrap gap-[16px]">
+        <SocialButtons icon="bxl:instagram" link="/" color="#6C8091" />
+        <SocialButtons icon="bxl:telegram" link="/" color="#24A1DE" />
+        <SocialButtons icon="bxl:youtube" link="/" color="#FF0000" />
+        <SocialButtons icon="bxl:pinterest-alt" link="/" color="#E60023" />
+        <SocialButtons icon="bxl:linkedin" link="/" color="#0077B5" />
+        <SocialButtons icon="bxl:tiktok" link="/" color="#000000" />
+        <SocialButtons icon="bxl:facebook" link="/" color="#1877F2" />
+        <SocialButtons icon="bxl:discord-alt" link="/" color="#5865F2" />
+        <SocialButtons icon="bxl:github" link="/" color="#000000" />
+        <SocialButtons icon="fa6-brands:x-twitter" link="/" color="#000000" />
       </div>
     </div>
   </main>
