@@ -59,10 +59,6 @@ import SocialButton from "@/components/SocialButton.vue";
           <DonateButton :amount="5000" link="/" />
           <DonateButton :amount="10000" link="/" />
         </div>
-
-        <svg width="46" height="6" viewBox="0 0 46 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M43 3H23H3" stroke="#6C8091" stroke-opacity="0.4" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
       </div>
     </div>
   </main>
