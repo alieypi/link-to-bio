@@ -1,6 +1,10 @@
+<script setup lang="ts">
+import MainButton from "@/components/MainButton.vue";
+</script>
+
 <template>
   <main class="m-auto max-w-[430px] pt-[170px]">
-    <div class="w-full h-screen bg-white rounded-t-[40px] px-[32px]">
+    <div class="flex flex-col gap-[18px] w-full h-screen bg-white rounded-t-[40px] px-[32px]">
       <div class="flex flex-row">
         <div class="basis-1/6">
           <div class="flex justify-center py-[30px]">
@@ -22,9 +26,14 @@
           </div>
         </div>
       </div>
-      <div class="flex flex-col items-center">
+      <div class="flex flex-col gap-[12px] items-center">
         <h1 class="text-[22px] font-bold text-[#5C5F82]">علیرضا امانی پور</h1>
         <span dir="ltr" class="text-[18px] font-regular text-[#6C8091] tracking-[2px]">@alieypi</span>
+      </div>
+      <div class="flex flex-col gap-[18px] py-[18px]">
+        <MainButton icon="solar:phone-calling-linear" title="موبایل" subtitle="09395914874" link="call:+989395914874" />
+        <MainButton icon="solar:point-on-map-perspective-linear" title="ایمیل" subtitle="eypidev@gmail.com" link="mailto:eypidev@gmail.com" />
+        <MainButton icon="solar:earth-linear" title="وبسایت" subtitle="eypi.ir" link="https://eypi.ir" />
       </div>
     </div>
   </main>
