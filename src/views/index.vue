@@ -1,6 +1,7 @@
 <script setup lang="ts">
+import DonateButton from "@/components/DonateButton.vue";
 import MainButton from "@/components/MainButton.vue";
-import SocialButtons from "@/components/SocialButton.vue";
+import SocialButton from "@/components/SocialButton.vue";
 </script>
 
 <template>
@@ -37,16 +38,31 @@ import SocialButtons from "@/components/SocialButton.vue";
         <MainButton icon="solar:earth-linear" title="وبسایت" subtitle="eypi.ir" link="https://eypi.ir" />
       </div>
       <div class="grid grid-cols-5 gap-[16px]">
-        <SocialButtons icon="bxl:instagram" link="/" color="#6C8091" />
-        <SocialButtons icon="bxl:telegram" link="/" color="#24A1DE" />
-        <SocialButtons icon="bxl:youtube" link="/" color="#FF0000" />
-        <SocialButtons icon="bxl:pinterest-alt" link="/" color="#E60023" />
-        <SocialButtons icon="bxl:linkedin" link="/" color="#0077B5" />
-        <SocialButtons icon="bxl:tiktok" link="/" color="#000000" />
-        <SocialButtons icon="bxl:facebook" link="/" color="#1877F2" />
-        <SocialButtons icon="bxl:discord-alt" link="/" color="#5865F2" />
-        <SocialButtons icon="bxl:github" link="/" color="#000000" />
-        <SocialButtons icon="fa6-brands:x-twitter" link="/" color="#000000" />
+        <SocialButton icon="bxl:instagram" link="/" color="#6C8091" />
+        <SocialButton icon="bxl:telegram" link="/" color="#24A1DE" />
+        <SocialButton icon="bxl:youtube" link="/" color="#FF0000" />
+        <SocialButton icon="bxl:pinterest-alt" link="/" color="#E60023" />
+        <SocialButton icon="bxl:linkedin" link="/" color="#0077B5" />
+        <SocialButton icon="bxl:tiktok" link="/" color="#000000" />
+        <SocialButton icon="bxl:facebook" link="/" color="#1877F2" />
+        <SocialButton icon="bxl:discord-alt" link="/" color="#5865F2" />
+        <SocialButton icon="bxl:github" link="/" color="#000000" />
+        <SocialButton icon="fa6-brands:x-twitter" link="/" color="#000000" />
+      </div>
+      <div class="flex flex-col gap-[22px] mt-[50px]">
+        <div class="w-full flex flex-col items-center gap-[10px]">
+          <h2 class="text-[28px] font-bold text-[#5C5F82] drop-shadow-[-2px_2px_0_#5C5F8233]">حمایت مالی</h2>
+          <hr class="w-[130px] border-[2px] border-[#F1A5A0]" />
+        </div>
+        <div class="grid grid-cols-2 gap-[16px]">
+          <DonateButton :amount="1000" link="/" />
+          <DonateButton :amount="5000" link="/" />
+          <DonateButton :amount="10000" link="/" />
+        </div>
+
+        <svg width="46" height="6" viewBox="0 0 46 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M43 3H23H3" stroke="#6C8091" stroke-opacity="0.4" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
       </div>
     </div>
   </main>
