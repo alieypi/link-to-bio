@@ -2,6 +2,10 @@
 import DonateButton from "@/components/DonateButton.vue";
 import MainButton from "@/components/MainButton.vue";
 import SocialButton from "@/components/SocialButton.vue";
+
+const moveToAbout = () => {
+  window.location.href = "#about";
+};
 </script>
 
 <template>
@@ -22,7 +26,7 @@ import SocialButton from "@/components/SocialButton.vue";
         </div>
         <div class="basis-1/6">
           <div class="flex justify-center py-[30px]">
-            <button>
+            <button @click="moveToAbout">
               <Icon icon="solar:info-circle-linear" width="28" height="28" color="#5C5F82" />
             </button>
           </div>
@@ -58,6 +62,19 @@ import SocialButton from "@/components/SocialButton.vue";
           <DonateButton :amount="1000" link="/" />
           <DonateButton :amount="5000" link="/" />
           <DonateButton :amount="10000" link="/" />
+        </div>
+      </div>
+      <div id="about" class="flex flex-col gap-[22px] my-[50px]">
+        <div class="w-full flex flex-col items-center gap-[10px]">
+          <h2 class="text-[28px] font-bold text-[#5C5F82] drop-shadow-[-2px_2px_0_#5C5F8233]">درباره من</h2>
+          <hr class="w-[130px] border-[2px] border-[#F1A5A0]" />
+        </div>
+        <div class="text-justify">
+          <p class="text-[14px] text-[#5C5F82] leading-8">
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و
+            سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و
+            سه درصد گذشته
+          </p>
         </div>
       </div>
     </div>

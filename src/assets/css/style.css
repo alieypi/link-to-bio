@@ -1,5 +1,8 @@
 @import url("../css/fonts.css");
 
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: yekanbakh;
   background-color: #e4e4e4;
