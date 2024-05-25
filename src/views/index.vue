@@ -2,19 +2,24 @@
 import DonateButton from "@/components/DonateButton.vue";
 import MainButton from "@/components/MainButton.vue";
 import SocialButton from "@/components/SocialButton.vue";
+import QrCodeActionSheet from "@/components/QrCodeActionSheet.vue";
+import { ref } from "vue";
 
 const moveToAbout = () => {
   window.location.href = "#about";
 };
+
+const openActionSheet = ref(false);
 </script>
 
 <template>
-  <main class="m-auto max-w-[430px] pt-[170px]">
+  <QrCodeActionSheet :open="openActionSheet" @close="openActionSheet = false" />
+  <main class="relative m-auto max-w-[430px] pt-[170px]" :class="{ 'overflow-y-hidden': openActionSheet }">
     <div class="flex flex-col gap-[18px] w-full bg-white rounded-t-[40px] px-[32px]">
       <div class="flex flex-row">
         <div class="basis-1/6">
           <div class="flex justify-center py-[30px]">
-            <button>
+            <button @click="openActionSheet = true">
               <Icon icon="solar:qr-code-linear" width="28" height="28" color="#5C5F82" />
             </button>
           </div>
