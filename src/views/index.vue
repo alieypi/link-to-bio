@@ -42,7 +42,7 @@ const openActionSheet = ref(false);
         <span dir="ltr" class="text-[18px] font-regular text-[#6C8091] tracking-[2px]">@alieypi</span>
       </div>
       <div class="flex flex-col gap-[18px] py-[18px]">
-        <MainButton icon="solar:phone-calling-linear" title="موبایل" subtitle="09395914874" link="call:+989395914874" />
+        <MainButton icon="solar:phone-calling-linear" title="موبایل" subtitle="09123456789" link="call:+989123456789" />
         <MainButton icon="solar:point-on-map-perspective-linear" title="ایمیل" subtitle="eypidev@gmail.com" link="mailto:eypidev@gmail.com" />
         <MainButton icon="solar:earth-linear" title="وبسایت" subtitle="eypi.ir" link="https://eypi.ir" />
       </div>
