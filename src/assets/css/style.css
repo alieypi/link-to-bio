@@ -1,0 +1,19 @@
+@import url("../css/fonts.css");
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: yekanbakh;
+  background-color: #e4e4e4;
+  -webkit-touch-callout: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+}
+.fa-num {
+  -moz-font-feature-settings: "ss01";
+  -webkit-font-feature-settings: "ss01";
+  font-feature-settings: "ss01";
+}
