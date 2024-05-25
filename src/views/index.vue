@@ -88,10 +88,10 @@ const openActionSheet = ref(false);
 
 <style scoped>
 main {
-  background-image: url("/bg.png");
+  background-image: url("/bg.gif");
   background-position: center top;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: 100% auto;
   background-attachment: fixed;
 }
 </style>
