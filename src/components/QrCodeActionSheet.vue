@@ -26,23 +26,46 @@ const sheetHeader = ref<HTMLDivElement | null>(null);
 
 const sheetDefaultTop = ref<number>(0);
 const sheetTop = ref<number>(0);
-const dragStart = () => {
+
+// Touch Event
+const touchDragStart = () => {
   const { top } = window.getComputedStyle(sheet.value as HTMLDivElement);
   sheetDefaultTop.value = parseInt(top);
-  sheetHeader.value?.addEventListener("touchmove", dragging);
+  sheetHeader.value?.addEventListener("touchmove", touchDragging);
 };
 
-const dragging = (event: TouchEvent) => {
+const touchDragging = (event: TouchEvent) => {
   sheetTop.value = event.touches[0].clientY - (sheetHeader.value as HTMLDivElement).clientHeight / 2;
 
   if (sheetTop.value >= sheetDefaultTop.value) {
     (sheet.value as HTMLDivElement).style.top = `${sheetTop.value}px`;
   }
 
-  sheetHeader.value?.addEventListener("touchend", dragEnd);
+  sheetHeader.value?.addEventListener("touchend", touchDragEnd);
 };
 
-const dragEnd = () => {
+const touchDragEnd = () => {
+  if (sheetTop.value > sheetDefaultTop.value) emit("close");
+};
+
+// Mouse Event
+const mouseDragStart = () => {
+  const { top } = window.getComputedStyle(sheet.value as HTMLDivElement);
+  sheetDefaultTop.value = parseInt(top);
+  sheetHeader.value?.addEventListener("mousemove", mouseDragging);
+};
+
+const mouseDragging = (event: MouseEvent) => {
+  sheetTop.value = event.clientY - (sheetHeader.value as HTMLDivElement).clientHeight / 2;
+
+  if (sheetTop.value >= sheetDefaultTop.value) {
+    (sheet.value as HTMLDivElement).style.top = `${sheetTop.value}px`;
+  }
+
+  sheetHeader.value?.addEventListener("mouseup", mouseDragEnd);
+};
+
+const mouseDragEnd = () => {
   if (sheetTop.value > sheetDefaultTop.value) emit("close");
 };
 </script>
@@ -56,7 +79,7 @@ const dragEnd = () => {
           class="absolute flex flex-col justify-between bottom-0 gap-[18px] w-full h-[500px] bg-white rounded-t-[40px] px-[32px] z-[11]"
           v-if="open"
         >
-          <div ref="sheetHeader" class="flex justify-center py-[16px] cursor-grab" @touchstart="dragStart">
+          <div ref="sheetHeader" class="flex justify-center py-[16px] cursor-grab" @touchstart="touchDragStart" @mousedown="mouseDragStart">
             <svg width="46" height="6" viewBox="0 0 46 6" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M43 3H23H3" stroke="#6C8091" stroke-opacity="0.4" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
